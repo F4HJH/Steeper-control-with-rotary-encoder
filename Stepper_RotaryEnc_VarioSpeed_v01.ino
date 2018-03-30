@@ -1,5 +1,5 @@
 /*
-PIN USED
+PIN USED ON CNC SHIELD CONNECTED ON ARDUINO UNO
 
 D9  Rotary encoder DT (end stop X on CNC shield)
 D10 Rotary encoder CLK (end stop Y on CNC shield)
@@ -48,12 +48,12 @@ void intervitesse(){
  switch (digitalRead (speedbutton)) {
       case HIGH:
 //      stepper.stop(); 
-        vitesse=10;  // fast speed
+        speed=10;  // fast speed
          break;
 
       case LOW:
 //      stepper.stop(); 
-        vitesse=1;  // slow speed
+        speed=1;  // slow speed
         break;
                                       }  
                   }
@@ -64,7 +64,7 @@ void setup(){
   pinMode(CLK, INPUT);
   pinMode(SW, INPUT);
   digitalWrite(SW, HIGH);
-  pinMode(boutonvitesse, INPUT); 
+  pinMode(speedbutton, INPUT); 
 
 // Motor
   pinMode(Enable_PIN, OUTPUT);
